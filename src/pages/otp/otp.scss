@@ -1,0 +1,26 @@
+page-otp {
+.enter-code{
+  margin: 20pt;
+  font-size: 1.2rem;
+}
+  .verify-btn-div{
+    margin: 40pt 20pt;
+  }
+  .icon-text{
+    margin-left: 5pt;
+  }
+  .otp-input-row{
+    margin: 0 20pt 20pt 40pt;
+    .otp-round{
+      margin: 5pt 6pt;
+    }
+    .otp-input{
+      border: 1px solid #c8c7cc !important;
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 1px 1px 6px #dedede;
+    }
+  }
+}

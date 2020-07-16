@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons no-margin left>
+      <button padding-left no-margin ion-button icon-only menuToggle>
+        <ion-icon class="text-white" name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'LANGUAGE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="rounded-input-div1">
+    <div class="text-grey heading" style="margin-top: 0px" padding-left>{{ 'LANGUAGE' | translate }}</div>
+
+    <ion-item class="rounded-input" no-lines no-padding>
+      <button clear item-left icon-only class="btn-with-icon">
+        <ion-icon class="text-grey" ios="ios-transgender" md="md-transgender"></ion-icon>
+      </button>
+      <ion-label>{{ 'LANGUAGE' | translate }}</ion-label>
+      <ion-select [(ngModel)]="laguage" class="set-font-size" (ionChange)="selectLanguage()">
+        <ion-option value="en" selected>English</ion-option>
+        <ion-option value="sp">española</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

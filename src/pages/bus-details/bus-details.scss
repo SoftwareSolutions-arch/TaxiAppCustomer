@@ -1,0 +1,48 @@
+page-bus-details {
+  .big-font{
+    font-size: 2rem;
+  }
+  .top_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .fab {
+    width: 25pt;
+    height: 25pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 2px;
+  }
+  .number {
+    margin: auto;
+    padding: 10px;
+    font-size: 2.6rem;
+    font-weight: 500;
+  }
+  .plus-minus {
+    background-color: #e0e0e0 !important;
+    color: black;
+    font-size: 3rem !important;
+  }
+  /*.fab .button-inner{
+    margin-top: -2px;
+  }*/
+  .plus-minus:focus {
+    background-color: #178D42 !important;
+    color: white !important;
+  }
+  .seats-text{
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .book-now-div{
+    margin: 20pt;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 3px;
+  }
+}

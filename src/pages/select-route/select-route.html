@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{ 'SELECT_ROUTE' | translate }}</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="select-data small-text">
+    <span class="row top">
+      <div item-left class="dot"></div>
+      {{ 'FROM' | translate }}
+    </span>
+
+    <ion-item no-lines>
+      <input clearInput class='auto-location full-input' placeholder="{{ 'ENTER_LOCATION' | translate }}" [(ngModel)]='headerLocation'
+        (input)='onChangeLocation($event.target.value)'>
+    </ion-item>
+    <div>
+      <div class="half-saparator"></div>
+      <img class="direction" src="assets/img/direction-arrow.png">
+    </div>
+
+    <span class="row top">
+      <div item-left class="dot" style="background: #178D42"></div>
+      {{ 'DESTINATION' | translate }}
+    </span>
+    <ion-item no-lines>
+      <input clearInput class='auto-location full-input' placeholder="{{ 'ENTER_LOCATION' | translate }}" [(ngModel)]='headerLocations'
+        (input)='onChangeLocations($event.target.value)'>
+    </ion-item>
+  </div>
+  <div class="location-option" *ngFor="let item of this.autocompleteItemsSearch" tappable
+    (click)="chooseItemSource(item)">
+    <div>{{item.description}}</div>
+  </div>
+
+  <div class="location-option" *ngFor="let item of this.autocompleteItemsSearchs" tappable
+    (click)="chooseItemSources(item)">
+    <div>{{item.description}}</div>
+  </div>
+  <div id="infowindow-content">
+    <span id="place-name" class="title"></span><br>
+    <span id="place-address"></span>
+  </div>
+</ion-content>

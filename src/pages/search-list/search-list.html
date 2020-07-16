@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{title}}</ion-title>
+    <ion-buttons (click)="openFilter()" end>
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div *ngIf="!isListEmpty">
+    <div (click)="openDetails()">
+    <ion-list class="list_div">
+      <ion-item no-lines>
+        <div class="row">
+          <span class="big-font">10:21</span>
+          <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey" name="arrow-round-forward"></ion-icon>
+          <span class="big-font">12:40</span>
+          <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span class="amount_details">$39.00</span>
+        </div>
+      </ion-item>
+      <ion-item no-lines style="min-height: 1rem">
+        <div class="travel_agaency">Shyammoli NR Travels</div>
+        <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+      </ion-item>
+
+      <div style="margin-top: 10pt;">
+        <span class="bus_class text-grey">Hyundai universe,AC</span>
+      </div>
+      <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+        <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+          <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+        </p>
+      </div>
+    </ion-list>
+  </div>
+    <div (click)="openDetails()">
+      <ion-list class="list_div">
+        <ion-item no-lines>
+          <div class="row">
+            <span class="big-font">10:21</span>
+            <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey" name="arrow-round-forward"></ion-icon>
+            <span class="big-font">12:40</span>
+            <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span class="amount_details">$39.00</span>
+          </div>
+        </ion-item>
+        <ion-item no-lines style="min-height: 1rem">
+          <div class="travel_agaency">Shyammoli NR Travels</div>
+          <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+        </ion-item>
+
+        <div style="margin-top: 10pt;">
+          <span class="bus_class text-grey">Hyundai universe,AC</span>
+        </div>
+        <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+          <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+            <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+          </p>
+        </div>
+      </ion-list>
+    </div>
+    <div (click)="openDetails()">
+      <ion-list class="list_div">
+        <ion-item no-lines>
+          <div class="row">
+            <span class="big-font">10:21</span>
+            <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey" name="arrow-round-forward"></ion-icon>
+            <span class="big-font">12:40</span>
+            <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span class="amount_details">$39.00</span>
+          </div>
+        </ion-item>
+        <ion-item no-lines style="min-height: 1rem">
+          <div class="travel_agaency">Shyammoli NR Travels</div>
+          <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+        </ion-item>
+
+        <div style="margin-top: 10pt;">
+          <span class="bus_class text-grey">Hyundai universe,AC</span>
+        </div>
+        <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+          <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+            <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+          </p>
+        </div>
+      </ion-list>
+    </div>
+    <div (click)="openDetails()">
+      <ion-list class="list_div">
+        <ion-item no-lines>
+          <div class="row">
+            <span class="big-font">10:21</span>
+            <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey" name="arrow-round-forward"></ion-icon>
+            <span class="big-font">12:40</span>
+            <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span class="amount_details">$39.00</span>
+          </div>
+        </ion-item>
+        <ion-item no-lines style="min-height: 1rem">
+          <div class="travel_agaency">Shyammoli NR Travels</div>
+          <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+        </ion-item>
+
+        <div style="margin-top: 10pt;">
+          <span class="bus_class text-grey">Hyundai universe,AC</span>
+        </div>
+        <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+          <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+            <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+          </p>
+        </div>
+      </ion-list>
+    </div>
+    <div (click)="openDetails()">
+    <ion-list class="list_div">
+      <ion-item no-lines>
+        <div class="row">
+          <span class="big-font">10:21</span>
+          <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey" name="arrow-round-forward"></ion-icon>
+          <span class="big-font">12:40</span>
+          <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span class="amount_details">$39.00</span>
+        </div>
+      </ion-item>
+      <ion-item no-lines style="min-height: 1rem">
+        <div class="travel_agaency">Shyammoli NR Travels</div>
+        <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+      </ion-item>
+
+      <div style="margin-top: 10pt;">
+        <span class="bus_class text-grey">Hyundai universe,AC</span>
+      </div>
+      <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+        <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+          <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+        </p>
+      </div>
+    </ion-list>
+  </div>
+  </div>
+  <div *ngIf="isListEmpty" text-center>
+    <img class="no-result" src="assets/img/no-result.png">
+    <div class="no-result-text" text-center>No Result Found</div>
+    <div class="try-again-div">
+      <button ion-button full round class="small-text">TRY AGAIN</button>
+    </div>
+  </div>
+</ion-content>

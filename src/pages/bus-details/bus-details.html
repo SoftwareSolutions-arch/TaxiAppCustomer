@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{ 'BUS_DETAILS' | translate }}</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style="height: 200px;">
+    <!--<ion-slides loop="true" pager autoplay="1000" loop="true" speed="500">-->
+    <ion-slides loop="true" pager>
+      <ion-slide style="height: 150px !important;">
+        <img style="width: 100%" src="assets/img/busimage.png">
+      </ion-slide>
+      <ion-slide style="height: 150px !important;">
+        <img style="width: 100%" src="assets/img/busimage.png">
+      </ion-slide>
+      <ion-slide style="height: 150px !important;">
+        <img style="width: 100%" src="assets/img/busimage.png">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <ion-list class="list_div" margin-top (click)="ticket()">
+    <ion-item no-lines>
+      <div class="row">
+        <span class="big-font">10:21</span>
+        <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey"
+          name="arrow-round-forward"></ion-icon>
+        <span class="big-font">12:40</span>
+        <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span
+          class="amount_details">$39.00</span>
+      </div>
+    </ion-item>
+    <ion-item no-lines style="min-height: 1rem">
+      <div class="travel_agaency">Shyammoli NR Travels</div>
+      <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+    </ion-item>
+
+    <div style="margin-top: 10pt;">
+      <span class="bus_class text-grey">Hyundai universe,AC</span>
+    </div>
+    <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+      <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+        <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+      </p>
+    </div>
+  </ion-list>
+  <div style="margin: 15pt">
+    <p class="small-text">{{ 'DRIVER_NAME' | translate }} : John Doe</p>
+    <p class="small-text">{{ 'ASSISTANT_NAME' | translate }} : Calim John</p>
+    <p class="small-text">{{ 'ADDRESS' | translate }} : XYZ 102 Street London</p>
+  </div>
+  <div class="main_content" style="margin-top: 25pt;">
+    <div margin-left class="bold-font" style="font-size: 1.4rem">{{ 'POPULAR_FACILITIES' | translate }}</div>
+    <div class="row">
+      <span>
+        <ion-item no-lines>
+          <ion-label class="text-grey small-text">{{ 'AC' | translate }}</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+      </span>
+      <span>
+        <ion-item no-lines>
+          <ion-label class="text-grey small-text">{{ 'WATER_BOTTLE' | translate }}</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+      </span>
+      <span>
+        <ion-item no-lines>
+          <ion-label class="text-grey small-text">{{ 'BLANKET' | translate }}</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+      </span>
+    </div>
+    <div class="row">
+      <span>
+        <ion-item no-lines>
+          <ion-label class="text-grey small-text">{{ 'MOVIE' | translate }}</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+      </span>
+      <span>
+        <ion-item no-lines>
+          <ion-label class="text-grey small-text">{{ 'WIFI' | translate }}</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+      </span>
+      <span>
+        <ion-item no-lines>
+          <ion-label class="text-grey small-text">{{ 'CHARGING_POINT' | translate }}</ion-label>
+          <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+        </ion-item>
+      </span>
+    </div>
+  </div>
+  <ion-list margin-top padding-top>
+    <ion-item no-lines>
+      <div class="seats-text">{{ 'NO_OF_SEATS_YOU_WANT' | translate }}</div>
+      <div item-right class="row plus-minus-div">
+        <button (click)="decrementQty()" class="plus-minus" ion-fab>-</button>
+        <span class="number">12</span>
+        <span><button (click)="incrementQty()" class="plus-minus" ion-fab>+</button></span>
+      </div>
+    </ion-item>
+  </ion-list>
+  <div text-center class="book-now-div">
+    <button (click)="bookNow()" class="bold-font small-text" full round ion-button>{{ 'BOOK_NOW' | translate }}</button>
+  </div>
+</ion-content>

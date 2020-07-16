@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons no-margin left>
+      <button padding-left no-margin ion-button icon-only menuToggle>
+        <ion-icon class="text-white" name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'EDIT_PROFILE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="top_div">
+    <div margin-top text-center (click)="presentActionSheet()">
+      <img class="user-image" src="assets/img/user.png">
+    </div>
+    <p class="change_profile small-text">{{ 'CHANGE_USER_PROFILE_PHOTO' | translate }}</p>
+  </div>
+
+  <form (submit)="save()" [formGroup]="editForm">
+    <ion-list>
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'FULL_NAME' | translate }}" formControlName="fullname" class="text-grey full-input" type="fullname"
+          name="fullname">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-person" md="md-person"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.fullname">
+          <div class="error-message"
+            *ngIf="editForm.get('fullname').hasError(error.type) && (editForm.get('fullname').dirty || editForm.get('fullname').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'EMAIL' | translate }}" formControlName="email" class="full-input text-grey" type="email">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-mail" md="md-mail"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="editForm.get('email').hasError(error.type) &&
+         (editForm.get('email').dirty || editForm.get('email').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'MOBILE_NUMBER' | translate }}" formControlName="mobilenumber" class="text-grey full-input" type="number"
+          name="mobilenumber">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-call" md="md-call"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.mobilenumber">
+          <div class="error-message"
+            *ngIf="editForm.get('mobilenumber').hasError(error.type) && (editForm.get('mobilenumber').dirty || editForm.get('mobilenumber').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'ADDRESS' | translate }}" formControlName="address" class="text-grey full-input" type="text" name="address">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-home" md="md-home"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.address">
+          <div class="error-message"
+            *ngIf="editForm.get('address').hasError(error.type) && (editForm.get('address').dirty || editForm.get('address').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-transgender" md="md-transgender"></ion-icon>
+        </button>
+        <ion-label>{{ 'GENDER' | translate }}</ion-label>
+        <ion-select>
+          <ion-option value="f">{{ 'FEMALE' | translate }}</ion-option>
+          <ion-option value="m">{{ 'MALE' | translate }}</ion-option>
+        </ion-select>
+      </ion-item>
+      </div>
+      <div class="save-div" text-center>
+        <button class="save-btn" full round [disabled]="editForm.invalid" ion-button>{{ 'SAVE' | translate }}
+          <ion-spinner *ngIf="isLoading" margin-left name="ios"></ion-spinner>
+        </button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

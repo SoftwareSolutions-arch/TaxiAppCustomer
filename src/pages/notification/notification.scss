@@ -1,0 +1,37 @@
+page-notification {
+    .top_title {
+        font-weight: bold;
+        font-style: oblique;
+      margin-left: 20pt;
+    }
+
+    .notification_icon {
+      position: absolute;
+      left: 0;
+      height: 43pt;
+      width: 43pt;
+      border-radius: 50%;
+      padding: 8pt 12pt;
+      font-size: 3.8rem !important;
+      color: #178D42;
+      background: #dedede99;
+    }
+  .content-div{
+    margin: 8pt 0 8pt 37pt;
+  }
+
+    .paragraph_details {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .live_tracking {
+      padding: 5pt 10pt !important;
+      margin: 0!important;
+      font-size: 0.8rem !important;
+      height: auto !important;
+    }
+  .label{
+    margin: 8pt;
+  }
+}

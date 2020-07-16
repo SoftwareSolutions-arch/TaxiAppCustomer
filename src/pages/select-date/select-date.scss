@@ -1,0 +1,32 @@
+page-select-date {
+    .calendar-row .select {
+        background: #178D42;
+    }
+
+    .calendar-row .calendar-col {
+        padding: 1.4rem;
+        border: none !important;
+        border-radius: 35pt;
+        height: 35pt;
+        margin: 1px;
+    }
+
+    .calendar-header-col {
+        font-size: 2rem;
+        color: #666;
+        background: #c8c7cc38 !important;
+    }
+
+    .calendar-header-col {
+        font-size: 2rem !important;
+        color: #666;
+        background: #c8c7cc38;
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .calendar-row .today {
+        background: #262a275c;
+    }
+
+}

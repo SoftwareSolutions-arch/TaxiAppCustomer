@@ -1,0 +1,145 @@
+/*.text-grey {color: #4C4C4C;}*/
+.text-grey {color: #999;}
+.text-white {color: white;}
+.text-green{color: #178D42;}
+.background-green{background: #178D42;}
+.small-text{font-size: 1.2rem;}
+.medium-text{font-size: 1.4rem;}
+.bold-font{font-weight: bold}
+.error-message {
+  color: red;
+  text-align: left;
+  margin-left: 20pt;
+  margin-top: 5pt;
+  font-size: 12px;
+}
+.btn-with-icon {
+  background: transparent;
+  margin: 0 !important;
+  .input-icon {
+    font-size: 1.9rem;
+    margin-top: 5px;
+    margin-left: 5pt;
+  }
+}
+.rounded-input-div {margin: 40pt 30pt 20pt 30pt;}
+.rounded-input-div1 {margin: 15pt 20pt 15pt 20pt;}
+.rounded-input {
+  margin-top: 10pt;
+  box-shadow: 1px 1px 10px #c8c7cc;
+  border-radius: 50px;
+  border: 1px solid #dedede !important;
+}
+.full-input {
+  border: none;
+  width: 100%;
+}
+.top-div {
+  background: #178D42;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  .top-logo-img {
+    width: 22%;
+    margin-top: 15pt;
+  }
+  .top-header {
+    padding: 20pt 0 40pt 0;
+  }
+}
+.toolbar-background {
+  background-color: #178D42;
+  color: white;
+}
+.toolbar-title {color: white;font-size: 1.5rem;}
+button{text-transform: none !important;}
+
+select{
+  display: inline-block;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+.back-button.show-back-button{color: white}
+.checkbox .checkbox-icon {
+  height: 18px;
+  width: 18px;
+  border-radius: 0 !important;
+  border-width: 2px !important;
+  border-color: #222222a8 !important;
+}
+.checkbox .checkbox-checked .checkbox-inner {
+  border-color: black !important;
+  left: 5px !important;
+  top: 2px;
+}
+.checkbox .checkbox-checked {
+  background-color: white !important;
+  border-color: #5d5e5d;
+  border-width: 1px !important;
+}
+
+/*Search data list*/
+.list_div{
+  padding-top : 7pt;
+  box-shadow:1px 1px 10px 1px #c8c7cc;
+  border-radius: 4px !important;
+  .dot {
+    height: 6px;
+    width: 6px;
+    background-color: #23934b;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 7pt 8pt 7pt 15pt;
+  }
+  .live_tracker {
+    background: #ddf4d9 !important;
+    padding: 6pt;
+    right: 0px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+  .live_btn {
+    background: none !important;
+    color: #67b59d;
+    float: right;
+    padding: 5px 0;
+    font-size: 1.2rem;
+  }
+  .amount_details {
+    background: #6ed15d !important;
+    position: absolute;
+    right: 10pt;
+    font-size: 1.3rem;
+    color: white;
+    padding: 4pt;
+  }
+
+  .travel_agaency {
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-style: oblique;
+  }
+
+  .bus_class {
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding-left: 15pt;
+    margin-left: 2pt;
+  }
+
+  .seats_availble {
+    color: red;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  ion-label{
+    margin: 5px!important;
+  }
+}
+.list-ios > .item-block:first-child{
+  border-top:none;
+}
+ion-label{
+  margin: 0px !important;
+}

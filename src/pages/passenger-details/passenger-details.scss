@@ -1,0 +1,21 @@
+page-passenger-details {
+
+  .passenger-main{
+    margin: 20pt 28pt;
+    .passenger-detail-div{
+      margin: 10pt;
+      margin-bottom: 15pt;
+      font-size: 1.4rem;
+    }
+  }
+  .continue-btn-div{
+    margin: 30pt 28pt;
+  }
+  ion-label{
+    margin: 0 !important;
+  }
+  ion-item{
+    min-height: 3.6rem !important;
+  }
+
+}

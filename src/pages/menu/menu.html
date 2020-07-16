@@ -1,0 +1,60 @@
+<ion-menu [content]="content" type="overlay">
+  <ion-content class="background-green">
+    <ion-list class="menu-list">
+      <ion-item style="height: 5rem" no-margin no-lines text-right>
+        <ion-icon padding menuClose class="text-white big-size" name="close"></ion-icon>
+      </ion-item>
+      <!--User-->
+      <div margin-left>
+        <ion-item no-lines>
+          <ion-avatar item-start>
+            <img class="user-img" src="assets/img/user-default.png">
+          </ion-avatar>
+          <h3 class="text-white">Samanth Smith</h3>
+          <div text-wrap class="text-white small-text" style="margin-top: 5px">samanthsmith@mail.com</div>
+        </ion-item>
+        <ion-item no-lines>
+          <button (click)="openPage('EditProfilePage')" menuClose class="edit-profile-btn small-text" item-right
+            ion-button round>{{ 'EDIT_PROFILE' | translate }}</button>
+        </ion-item>
+      </div>
+      <ion-item (click)="openPage('HomePage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="ios-home"></ion-icon>
+        <h3 class="text-white">{{ 'HOME' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="openPage('HistoryPage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="timer"></ion-icon>
+        <h3 class="text-white">{{ 'MY_HISTORY' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="openPage('NotificationPage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="notifications"></ion-icon>
+        <h3 class="text-white">{{ 'NOTIFICATIONS' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="openPage('AboutPage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" style="font-size: 5rem;padding: 0" item-left name="information"></ion-icon>
+        <h3 class="text-white">{{ 'ABOUT' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="shareApp()" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-share"></ion-icon>
+        <h3 class="text-white">{{ 'SHARE_APP' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="openPage('SettingsPage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="ios-aperture-outline"></ion-icon>
+        <h3 class="text-white">{{ 'SETTINGS' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="openPage('HelpPage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="md-help"></ion-icon>
+        <h3 class="text-white">{{ 'HELP' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="openPage('ContactFormPage')" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="phone-portrait"></ion-icon>
+        <h3 class="text-white">{{ 'CONTACT_US' | translate }}</h3>
+      </ion-item>
+      <ion-item (click)="exit()" menuClose margin-top no-lines>
+        <ion-icon class="left-option-icon" item-left name="exit"></ion-icon>
+        <h3 class="text-white">{{ 'EXIT' | translate }}</h3>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>

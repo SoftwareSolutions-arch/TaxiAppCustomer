@@ -1,0 +1,95 @@
+page-filters {
+    .btn_first {
+        width: 92px;
+        background: white;
+        border-radius: 15px !important;
+        text-transform: none;
+        color: gray;
+    }
+.main_content{
+  margin-top: 20pt;
+}
+    .time_depature {
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    .text-grey {
+        font-size: 10px;
+    }
+
+    .budget_label {
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 20px !important;
+    }
+
+    .range-md .range-bar {
+        height: 4px !important;
+    }
+
+    .range-md .range-knob {
+        border-radius: 15% !important;
+        width: 38px !important;
+        height: 20px !important;
+    }
+
+    .range-ios .range-bar {
+        height: 4px !important;
+    }
+
+    .range-ios .range-knob {
+        border-radius: 15% !important;
+        width: 34px !important;
+        height: 17px !important;
+        background-color: #178D42;
+        top: 14px !important;
+    }
+
+    .top_label_range {
+        position: absolute;
+        top: 63px;
+        font-size: 13px;
+        left: 4px;
+    }
+
+    .bottom_label_range {
+        position: absolute;
+        right: 10px;
+        font-size: 13px;
+        top: 63px;
+    }
+
+    .list-ios>.item-block:last-child,
+    .list-ios>.item-wrapper:last-child .item-block {
+        border-bottom: none !important;
+        border-top: none !important;
+    }
+
+    button.btn_first.disable-hover.item-button.button.button-ios.button-default.button-default-ios {
+        border: 1px solid gray;
+        font-size: 11px;
+    }
+
+
+
+    .btn_first:focus {
+        background-color: #178D42;
+        color: white;
+    }
+
+
+
+    button.btn_first.disable-hover.item-button.button.button-ios.button-default.button-default-ios {
+        min-width: 30%;
+    }
+
+    .item-md .item-button {
+        min-width: 32% !important;
+    }
+
+    .label-md {
+        margin: 13px 0px 13px 0;
+    }
+}

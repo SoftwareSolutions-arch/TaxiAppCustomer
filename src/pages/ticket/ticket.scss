@@ -1,0 +1,103 @@
+page-ticket {
+
+    .location-text {
+        font-size: 1.9rem;
+        margin: 20pt 10pt 0 10pt;
+    }
+
+    .travels-text {
+        padding: 5pt 0 70pt 0;
+    }
+
+    .card_div {
+        margin: -50pt auto 10pt auto;
+        background-image: url(../assets/img/Subtraction.png) !important;
+        background-size: 100% 100% !important;
+        background-position: center !important;
+        width: 65%;
+        -webkit-box-shadow: none !important;
+    }
+
+    .card-md {
+        background: none;
+    }
+
+    .top_ticket {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 15pt;
+    }
+
+    .top_border {
+        border-bottom: 1px solid #c8c7cc;
+        width: 90%;
+        margin: 10pt auto;
+    }
+
+
+    .first_row {
+        float: left;
+        margin-left: 10pt;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .second_row {
+        float: right;
+        margin-right: 15pt;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .border_radius {
+        border-bottom: 1px solid #7dc397;
+        width: 70%;
+        margin: auto;
+    }
+
+
+    .div_logo {
+        width: 70%;
+        margin: auto;
+    }
+
+    .bar_numebr {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #178D42;
+        margin: 7pt 0 10pt 0;
+    }
+
+    .download-pdf-btn {
+        padding: 15pt !important;
+    }
+
+    .download-pdf-div {
+        margin: 30pt;
+    }
+
+    .ticket_title {
+        color: white;
+        font-size: 1.5rem;
+        margin: auto;
+    }
+
+    .notification_icon {
+        color: white;
+        font-size: 3rem;
+        padding: 0 10pt;
+    }
+
+    .card-ios {
+        background: transparent;
+    }
+
+    .back-arrow {
+        font-size: 2.5rem;
+        padding: 0 10pt;
+    }
+}

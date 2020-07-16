@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons no-margin left>
+      <button padding-left no-margin ion-button icon-only menuToggle>
+        <ion-icon class="text-white" name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'NOTIFICATION' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item class="small-text" no-lines style="min-height: 1rem" text-center>
+    <div class="top_title">{{ 'TODAY' | translate }}</div>
+    <div item-right>{{ 'CLEAR_ALL' | translate }}</div>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-icon class="notification_icon" ios="ios-notifications-outline" md="ios-notifications-outline"></ion-icon>
+    <div class="content-div">
+      <p text-wrap class="paragraph_details">
+        Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Dollar has a Dummy Text
+      </p>
+    </div>
+  </ion-item>
+  <ion-item style="min-height: 1rem" no-lines no-margin>
+    <button (click)="liveTracking()" no-margin item-right class="live_tracking" round
+      ion-button>{{ 'START_LIVE_TRACKING' | translate }}</button>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-icon class="notification_icon" ios="ios-notifications-outline" md="ios-notifications-outline"></ion-icon>
+    <div class="content-div">
+      <p text-wrap class="paragraph_details">
+        Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Dollar has a Dummy Text
+      </p>
+    </div>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-icon class="notification_icon" ios="ios-notifications-outline" md="ios-notifications-outline"></ion-icon>
+    <div class="content-div">
+      <p text-wrap class="paragraph_details">
+        Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Dollar has a Dummy Text
+      </p>
+    </div>
+  </ion-item>
+  <ion-item class="small-text" no-lines style="min-height: 1rem" text-center>
+    <div class="top_title">{{ 'YESTERDAY' | translate }}</div>
+    <div item-right>{{ 'CLEAR_ALL' | translate }}</div>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-icon class="notification_icon" ios="ios-notifications-outline" md="ios-notifications-outline"></ion-icon>
+    <div class="content-div">
+      <p text-wrap class="paragraph_details">
+        Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Dollar has a Dummy Text
+      </p>
+    </div>
+  </ion-item>
+</ion-content>

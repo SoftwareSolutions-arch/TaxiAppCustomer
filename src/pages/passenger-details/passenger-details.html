@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{ 'PASSENGER_DETAILS' | translate }}</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="list_div">
+    <ion-item no-lines>
+      <div class="row">
+        <span style="font-size: 2rem" class="bold-font">10:21</span>
+        <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey"
+          name="arrow-round-forward"></ion-icon>
+        <span style="font-size: 2rem" class="bold-font">12:40</span>
+        <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span
+          class="amount_details">$39.00</span>
+      </div>
+    </ion-item>
+    <ion-item no-lines style="min-height: 1rem">
+      <div class="travel_agaency" style="font-size: 2rem">Shyammoli NR Travels</div>
+      <span class="seats_availble" item-right>24 {{ 'SEATS_LEFT' | translate }}</span>
+    </ion-item>
+
+    <div style="margin-top: 10pt;">
+      <span class="bus_class text-grey">Hyundai universe,AC</span>
+    </div>
+    <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+      <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+        <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+      </p>
+    </div>
+    <ion-item no-lines>
+      <span>{{ 'DATE' | translate }} : 2 July 2020</span>
+      <span item-right>{{ 'TOTAL_SEAT' | translate }} : 02</span>
+    </ion-item>
+  </ion-list>
+  <div class="passenger-main">
+    <div class="passenger-detail-div">{{ 'PASSENGER_DETAILS' | translate }} (1)</div>
+    <ion-item class="rounded-input medium-text" no-lines no-padding>
+      <input placeholder="{{ 'PASSENGER_NAME' | translate }}" class="full-input text-grey" type="email">
+      <button clear item-left icon-only class="btn-with-icon">
+        <ion-icon class="input-icon text-grey" name="person"></ion-icon>
+      </button>
+    </ion-item>
+    <div class="row">
+      <div no-padding col-6 style="padding-right: 5pt">
+        <ion-item class="rounded-input medium-text" no-lines no-padding>
+          <input placeholder="{{ 'GENDER' | translate }}" class="full-input text-grey" type="email">
+          <button clear item-left icon-only class="btn-with-icon">
+            <ion-icon class="input-icon text-grey" ios="ios-transgender" md="md-transgender"></ion-icon>
+          </button>
+        </ion-item>
+      </div>
+      <div no-padding col-6 style="padding-left: 5pt">
+        <ion-item class="rounded-input medium-text" no-lines no-padding>
+          <input placeholder="{{ 'AGE' | translate }}" class="full-input text-grey" type="email">
+          <button clear item-left icon-only class="btn-with-icon">
+            <ion-icon class="input-icon text-grey" name="person"></ion-icon>
+          </button>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <div class="passenger-main">
+    <div class="passenger-detail-div">{{ 'PASSENGER_DETAILS' | translate }} (2)</div>
+    <ion-item class="rounded-input medium-text" no-lines no-padding>
+      <input placeholder="{{ 'PASSENGER_NAME' | translate }}" class="full-input text-grey" type="email">
+      <button clear item-left icon-only class="btn-with-icon">
+        <ion-icon class="input-icon text-grey" name="person"></ion-icon>
+      </button>
+    </ion-item>
+    <div class="row">
+      <div no-padding col-6 style="padding-right: 5pt">
+        <ion-item class="rounded-input medium-text" no-lines no-padding>
+          <input placeholder="{{ 'GENDER' | translate }}" class="full-input text-grey" type="email">
+          <button clear item-left icon-only class="btn-with-icon">
+            <ion-icon class="input-icon text-grey" ios="ios-transgender" md="md-transgender"></ion-icon>
+          </button>
+        </ion-item>
+      </div>
+      <div no-padding col-6 style="padding-left: 5pt">
+        <ion-item class="rounded-input medium-text" no-lines no-padding>
+          <input placeholder="{{ 'AGE' | translate }}" class="full-input text-grey" type="email">
+          <button clear item-left icon-only class="btn-with-icon">
+            <ion-icon class="input-icon text-grey" name="person"></ion-icon>
+          </button>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <div class="passenger-main" padding-top>
+    <div class="passenger-detail-div">General Details</div>
+    <ion-item class="rounded-input medium-text" no-lines no-padding>
+      <input placeholder="{{ 'MOBILE_NUMBER' | translate }}" class="full-input text-grey" type="email">
+      <button clear item-left icon-only class="btn-with-icon">
+        <ion-icon class="input-icon text-grey" name="call"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item margin-top class="rounded-input medium-text" no-lines no-padding>
+      <input placeholder="{{ 'EMAIL_ADDRESS' | translate }}" class="full-input text-grey" type="email">
+      <button clear item-left icon-only class="btn-with-icon">
+        <ion-icon class="input-icon text-grey" name="mail"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item margin-top class="rounded-input medium-text" no-lines no-padding>
+      <input placeholder="{{ 'ID_PROOF' | translate }}" class="full-input text-grey" type="email">
+      <button clear item-left icon-only class="btn-with-icon">
+        <ion-icon class="input-icon text-grey" name="person"></ion-icon>
+      </button>
+    </ion-item>
+  </div>
+
+  <div class="continue-btn-div">
+    <button (click)="continue()" style="padding: 15pt" class="small-text" ion-button full
+      round>{{ 'CONTINUE' | translate }}</button>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{ 'SELECT_DATE' | translate }}</ion-title>
+    <ion-buttons end (click)="openNotificationPage()">
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-calendar #calendar></ion-calendar> -->
+  <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
+</ion-content>

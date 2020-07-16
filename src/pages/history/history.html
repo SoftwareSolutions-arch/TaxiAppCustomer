@@ -1,0 +1,201 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons no-margin left>
+      <button padding-left no-margin ion-button icon-only menuToggle>
+        <ion-icon class="text-white" name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'HISTORY' | translate }}</ion-title>
+    <ion-buttons end>
+      <button (click)="openNotifications()" style="color: white;" padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="segmentModel" color="primary" (ionChange)="segmentChanged($event)">
+    <ion-segment-button class="segment_section" value="payment">
+      <ion-icon ios="ios-cash-outline" md="ios-cash-outline"></ion-icon>
+      <span class="payment_history">{{ 'PAYMENT_HISTORY' | translate }}</span>
+    </ion-segment-button>
+    <ion-segment-button value="booking">
+      <ion-icon ios="ios-bookmark-outline" md="ios-bookmark-outline"></ion-icon>
+      {{ 'BOOKING_HISTORY' | translate }}
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentModel">
+    <ion-list *ngSwitchCase="'payment'">
+      <div class="row" style="margin-top: 25px;">
+        <p class="date_para">02 Feb 2020</p>
+        <p class="day_para">Sunday</p>
+      </div>
+      <ion-list class="history_div">
+        <ion-item no-lines class="item-box">
+          <div item-left>
+            <img class="div_logo" src="assets/img/logo-green.png">
+          </div>
+          <div item-center>
+            <span class="price_texts">Paid To Shyammoli NR Travles</span><br>
+            <span class="location_details">Macclesfiled - Gainsborogh</span>
+          </div>
+          <div item-right>
+            <div class="payment_amounts">$223</div>
+            <div class="card_details">{{ 'CARD_PAYMENT' | translate }}</div>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <div class="row" style="margin-top: 25px;">
+        <p class="date_para">02 Feb 2020</p>
+        <p class="day_para">Sunday</p>
+      </div>
+      <ion-list class="history_div">
+        <ion-item class="item-box" no-lines>
+          <div item-left>
+            <img class="div_logo" src="assets/img/logo-green.png">
+          </div>
+          <div item-center>
+            <span class="price_texts">Paid To Shyammoli NR Travles</span><br>
+            <span class="location_details">Macclesfiled - Gainsborogh</span>
+          </div>
+          <div item-right>
+            <div class="payment_amounts">$223</div>
+            <div class="card_details">{{ 'CARD_PAYMENT' | translate }}</div>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <div class="row" style="margin-top: 25px;">
+        <p class="date_para">02 Feb 2020</p>
+        <p class="day_para">Sunday</p>
+      </div>
+      <ion-list class="hhistory_div">
+        <ion-item no-lines class="item-box">
+          <div item-left>
+            <img class="div_logo" src="assets/img/logo-green.png">
+          </div>
+          <div item-center>
+            <span class="price_texts">Paid To Shyammoli NR Travles</span><br>
+            <span class="location_details">Macclesfiled - Gainsborogh</span>
+          </div>
+          <div item-right>
+            <div class="payment_amounts">$223</div>
+            <div class="card_details">{{ 'CARD_PAYMENT' | translate }}</div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </div>
+
+  <div [ngSwitch]="segmentModel">
+    <ion-list *ngSwitchCase="'booking'">
+      <div style="margin-top: 25px;">
+        <div class="row">
+          <p class="date_para">02 Feb 2020</p>
+          <p class="day_para">Sunday</p>
+        </div>
+        <ion-list class="history_div">
+          <ion-item class="item-box" no-lines>
+            <div class="row">
+              <div class="div_first">
+                <ion-icon class="div_images" ios="md-bus" md="md-bus"></ion-icon>
+
+                <p class="bus_number">{{ 'BUS_NUMBER' | translate }}</p>
+              </div>
+              <div class="div_second">
+                <ion-icon ios="ios-radio-button-on" md="md-radio-button-on" style="color: #178D42;font-size: 0.8em;">
+                </ion-icon>
+                <div class="colon-div"> :</div>
+                <ion-icon ios="ios-pin" md="md-pin" style="color: #178D42;font-size: 0.8em;"></ion-icon>
+              </div>
+              <div class="div_third">
+                <span class="price_text">Maccclesfiled</span><br>
+                <span class="destination_detail">Sunshine Restaurant Indore</span>
+              </div>
+              <div>
+                <div class="div_fourth">
+                  <div class="payment_amount">$223</div>
+                  <div class="card_detail">4.3
+                    <ion-icon style="color: #d4d437;" ios="ios-star" md="md-star"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div style="margin-top: 25px;">
+        <div class="row">
+          <p class="date_para">02 Feb 2020</p>
+          <p class="day_para">Sunday</p>
+        </div>
+        <ion-list class="history_div">
+          <ion-item class="item-box" no-lines>
+            <div class="row">
+              <div class="div_first">
+                <ion-icon class="div_images" ios="md-bus" md="md-bus"></ion-icon>
+                <p class="bus_number">{{ 'BUS_NUMBER' | translate }}</p>
+              </div>
+              <div class="div_second">
+                <ion-icon ios="ios-radio-button-on" md="md-radio-button-on" style="color: #178D42;font-size: 0.8em;">
+                </ion-icon>
+                <div class="colon-div"> :</div>
+                <ion-icon ios="ios-pin" md="md-pin" style="color: #178D42;font-size: 0.8em;"></ion-icon>
+              </div>
+              <div class="div_third">
+                <span class="price_text">Maccclesfiled</span><br>
+                <span class="destination_detail">Sunshine Restaurant Indore</span>
+              </div>
+              <div>
+                <div class="div_fourth">
+                  <div class="payment_amount">$223</div>
+                  <div class="card_detail">4.3
+                    <ion-icon style="color: #d4d437;" ios="ios-star" md="md-star"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div style="margin-top: 25px;">
+        <div class="row">
+          <p class="date_para">02 Feb 2020</p>
+          <p class="day_para">Sunday</p>
+        </div>
+        <ion-list class="history_div">
+          <ion-item class="item-box" no-lines>
+            <div class="row">
+              <div class="div_first">
+                <ion-icon class="div_images" ios="md-bus" md="md-bus"></ion-icon>
+
+                <p class="bus_number">{{ 'BUS_NUMBER' | translate }}</p>
+              </div>
+              <div class="div_second">
+                <ion-icon ios="ios-radio-button-on" md="md-radio-button-on" style="color: #178D42;font-size: 0.8em;">
+                </ion-icon>
+                <div class="colon-div"> :</div>
+                <ion-icon ios="ios-pin" md="md-pin" style="color: #178D42;font-size: 0.8em;"></ion-icon>
+              </div>
+              <div class="div_third">
+                <span class="price_text">Maccclesfiled</span><br>
+                <span class="destination_detail">Sunshine Restaurant Indore</span>
+              </div>
+              <div>
+                <div class="div_fourth">
+                  <div class="payment_amount">$223</div>
+                  <div class="card_detail">4.3
+                    <ion-icon style="color: #d4d437;" ios="ios-star" md="md-star"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons no-margin left>
+      <button padding-left no-margin ion-button icon-only menuToggle>
+        <ion-icon class="text-white" name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'CONTACT' | translate }}</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="top_div">
+    <p style="text-align: center;padding-top: 5%;">
+      <img class="top_image" src="assets/img/logo-green.png">
+    </p>
+  </div>
+  <div text-center><p class="change_profile">{{ 'CONTACT_FORM' | translate }}</p></div>
+
+  <form [formGroup]="editForm">
+    <ion-list>
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'FULL_NAME' | translate }}" formControlName="fullname" class="text-grey full-input" type="fullname"
+          name="fullname">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-person" md="md-person"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.fullname">
+          <div class="error-message"
+            *ngIf="editForm.get('fullname').hasError(error.type) && (editForm.get('fullname').dirty || editForm.get('fullname').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'EMAIL' | translate }}" formControlName="email" class="full-input text-grey" type="email">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-mail" md="md-mail"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="editForm.get('email').hasError(error.type) &&
+         (editForm.get('email').dirty || editForm.get('email').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'MOBILE_NUMBER' | translate }}" formControlName="mobilenumber" class="text-grey full-input" type="number"
+          name="mobilenumber">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-call" md="md-call"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.mobilenumber">
+          <div class="error-message"
+            *ngIf="editForm.get('mobilenumber').hasError(error.type) && (editForm.get('mobilenumber').dirty || editForm.get('mobilenumber').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+
+      <div class="rounded-input-div1">
+      <ion-item class="rounded-input" no-lines no-padding>
+        <input placeholder="{{ 'MESSAGE' | translate }}" formControlName="message" class="text-grey full-input" type="text" name="message">
+        <button clear item-left icon-only class="btn-with-icon">
+          <ion-icon class="text-grey" ios="ios-copy" md="ios-copy"></ion-icon>
+        </button>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.message">
+          <div class="error-message"
+            *ngIf="editForm.get('message').hasError(error.type) && (editForm.get('message').dirty || editForm.get('message').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+      </div>
+      <div class="save-div" text-center>
+        <button class="save-btn" full round [disabled]="editForm.invalid" ion-button>{{ 'SEND' | translate }}
+          <ion-spinner *ngIf="isLoading" margin-left name="ios"></ion-spinner>
+        </button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

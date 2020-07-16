@@ -1,0 +1,45 @@
+page-select-route {
+
+    .select-data {
+        margin: 10pt;
+        box-shadow: 1px 1px 16px #f1f1f1;
+        padding: 7pt;
+    }
+
+    .dot {
+        height: 8pt;
+        width: 8pt;
+        border: 1px solid #178D42;
+        border-radius: 50%;
+    }
+
+    .direction {
+        position: absolute;
+        right: 35pt;
+        z-index: 9999;
+        margin-top: -18pt;
+        width: 40px;
+        background: white;
+    }
+
+    .half-saparator {
+        background: #e0e0e0;
+        width: 82%;
+        height: 1px;
+        margin-left: 10pt;
+        margin-top: 5pt;
+        margin-bottom: 5pt;
+    }
+
+    .location-option {
+        padding: 5px;
+        color: gray;
+        margin-left: 10px;
+    }
+
+    .dot {
+        margin-right: 8px !important;
+        margin-top: 3px !important;
+    }
+
+}

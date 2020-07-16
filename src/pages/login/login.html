@@ -1,0 +1,58 @@
+<ion-content>
+  <div text-center>
+    <div class="top-div">
+      <img class="top-logo-img" src="assets/img/logo-white.png">
+      <h1 class="top-header text-white">{{ 'WELCOME_BACK' | translate }}</h1>
+    </div>
+    <form (submit)="doLogin()" [formGroup]="loginForm">
+      <ion-list>
+        <div class="rounded-input-div">
+          <ion-item class="rounded-input" no-lines no-padding>
+            <input placeholder="{{ 'EMAIL' | translate }}" formControlName="email" class="full-input text-grey"
+              type="email">
+            <button clear item-left icon-only class="btn-with-icon">
+              <ion-icon class="input-icon text-grey" name="mail"></ion-icon>
+            </button>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let error of error_messages.email">
+              <div class="error-message" *ngIf="loginForm.get('email').hasError(error.type) &&
+                (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div style="margin: 15pt 30pt 15pt 30pt;">
+          <ion-item class="rounded-input" no-lines no-padding>
+            <input placeholder="{{ 'PASSWORD' | translate }}" formControlName="password" class="text-grey full-input"
+              type="password" name="password">
+            <button clear item-left icon-only class="btn-with-icon">
+              <ion-icon class="input-icon text-grey" name="md-key"></ion-icon>
+            </button>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let error of error_messages.password">
+              <div class="error-message"
+                *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div text-right (click)="openForgotPassord()" no-lines class="forget-password">
+          {{ 'FORGET_PASSWORD' | translate }}?</div>
+
+        <div class="login-div" text-center>
+          <button class="login-btn" full round [disabled]="loginForm.invalid" ion-button>{{ 'LOGIN' | translate }}
+            <ion-spinner *ngIf="isLoading" margin-left name="ios"></ion-spinner>
+          </button>
+        </div>
+
+        <div>{{ 'DONT_HAVE_AN_ACCOUNT' | translate }}? <span (click)="openSignUpPage()"
+            class="register-text">{{ 'REGISTER' | translate }}</span></div>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

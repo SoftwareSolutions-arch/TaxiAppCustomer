@@ -1,0 +1,89 @@
+<ion-content>
+  <div text-center>
+    <div class="top-div">
+      <ion-icon class="back-arrow text-white" (click)="back()" name="md-arrow-back"></ion-icon>
+      <img class="top-logo-img" src="assets/img/logo-white.png">
+      <h1 class="top-header text-white">{{ 'CREATE_AN_ACCOUNT' | translate }}</h1>
+    </div>
+    <form (submit)="signUp()" [formGroup]="signUpForm">
+      <ion-list>
+        <!--FullName-->
+        <div class="rounded-input-div">
+          <ion-item class="rounded-input" no-lines no-padding>
+            <input placeholder="{{ 'FULLNAME' | translate }}" formControlName="fullName" class="full-input text-grey" type="text">
+            <button clear item-left icon-only class="btn-with-icon">
+              <ion-icon class="input-icon text-grey" name="md-person"></ion-icon>
+            </button>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let error of error_messages.fullName">
+              <div class="error-message" *ngIf="signUpForm.get('fullName').hasError(error.type) &&
+                (signUpForm.get('fullName').dirty || signUpForm.get('fullName').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <!--Email-->
+        <div style="margin: 15pt 30pt 15pt 30pt;">
+          <ion-item class="rounded-input" no-lines no-padding>
+            <input placeholder="{{ 'EMAIL' | translate }}" formControlName="email" class="full-input text-grey" type="email">
+            <button clear item-left icon-only class="btn-with-icon">
+              <ion-icon class="input-icon text-grey" name="mail"></ion-icon>
+            </button>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let error of error_messages.email">
+              <div class="error-message" *ngIf="signUpForm.get('email').hasError(error.type) &&
+                (signUpForm.get('email').dirty || signUpForm.get('email').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <!--Mobile number-->
+        <div style="margin: 15pt 30pt 15pt 30pt;">
+          <ion-item class="rounded-input" no-lines no-padding>
+            <input placeholder="{{ 'MOBILE_NUMBER' | translate }}" formControlName="mobileNumber" class="text-grey full-input" type="number" name="mobileNumber">
+            <button clear item-left icon-only class="btn-with-icon">
+              <ion-icon class="input-icon text-grey" name="call"></ion-icon>
+            </button>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let error of error_messages.mobileNumber">
+              <div class="error-message"
+                   *ngIf="signUpForm.get('mobileNumber').hasError(error.type) && (signUpForm.get('mobileNumber').dirty || signUpForm.get('mobileNumber').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <!--Password-->
+        <div style="margin: 15pt 30pt 15pt 30pt;">
+          <ion-item class="rounded-input" no-lines no-padding>
+            <input placeholder="{{ 'PASSWORD' | translate }}" formControlName="password" class="text-grey full-input" type="password" name="password">
+            <button clear item-left icon-only class="btn-with-icon">
+              <ion-icon class="input-icon text-grey" name="md-key"></ion-icon>
+            </button>
+          </ion-item>
+          <div>
+            <ng-container *ngFor="let error of error_messages.password">
+              <div class="error-message"
+                   *ngIf="signUpForm.get('password').hasError(error.type) && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="signup-div" text-center>
+          <button class="signup-btn" full round [disabled]="signUpForm.invalid" ion-button>{{ 'CREATE' | translate }}
+            <ion-spinner *ngIf="isLoading" margin-left name="ios"></ion-spinner>
+          </button>
+        </div>
+
+        <div>{{ 'ALREADY_HAVE_AN_ACCOUNT' | translate }}? <span (click)="back()" class="login-text">{{ 'LOGINCAPT' | translate }}</span></div>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{ 'Filters' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <div class="row">
+        <button class="btn_first" ion-button (click)="someAction()">
+          <ion-icon ios="ios-arrow-round-down" md="md-arrow-round-down" style="padding: 3px;"></ion-icon>
+          {{ 'LOW_TO_HIGH' | translate }}
+        </button>
+        <button class="btn_first" ion-button (click)="someAction()">
+          <ion-icon ios="ios-arrow-round-up" md="md-arrow-round-up" style="padding: 3px;"></ion-icon>
+          {{ 'HIGH_TO_LOW' | translate }}
+        </button>
+        <button class="btn_first" ion-button (click)="someAction()">
+          <ion-icon ios="ios-star-half" md="md-star-half" style="padding: 3px;"></ion-icon>
+          {{ 'REVIEWS' | translate }}
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+  <div class="main_content">
+    <h6 class="time_depature">{{ 'DEPARTURE_TIME' | translate }}</h6>
+    <div class="row">
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ 'BEFORE_6_AM' | translate }}(0)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ '6_AM_TO_12_PM' | translate }}(0)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+    </div>
+
+    <div class="row">
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ '12_PM_TO_6_PM' | translate }}(3)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ 'AFTER_6_PM' | translate }}(8)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+    </div>
+  </div><br>
+
+  <div class="main_content" style="margin-top: 5px;">
+    <h6 class="time_depature">ARRIVAL TIME</h6>
+    <div class="row">
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ 'BEFORE_6_AM' | translate }}(0)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ '6_AM_TO_12_PM' | translate }}(0)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+    </div>
+
+    <div class="row">
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ '12_PM_TO_6_PM' | translate }}(3)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ 'AFTER_6_PM' | translate }}</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+    </div>
+  </div><br>
+
+  <div class="main_content" style="margin-top: 5px;">
+    <h6 class="time_depature">Select Vehicle Type</h6>
+    <div class="row">
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ 'BEFORE_6_AM' | translate }}(0)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ '6_AM_TO_12_PM' | translate }}(0)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+    </div>
+
+    <div class="row">
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ '12_PM_TO_6_PM' | translate }}(3)</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+      <ion-item no-lines style="width: 50%;">
+        <ion-label class="text-grey small-font">{{ 'AFTER_6_PM' | translate }}</ion-label>
+        <ion-checkbox (click)="rememberMe($event)" style="margin-right: 5pt"></ion-checkbox>
+      </ion-item>
+    </div>
+  </div>
+
+  <ion-list margin-top>
+    <ion-label item-left class="budget_label">{{ 'YOUR_BUDGET' | translate }}</ion-label>
+    <ion-item>
+      <ion-range margin-bottom min="50" max="4450" pin [(ngModel)]="saturation" color="secondary">
+        <ion-label class="top_label_range" range-left>$50</ion-label>
+        <ion-label class="bottom_label_range" range-right>$4450</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <div class="save-div" text-center padding>
+    <button class="save-btn" full round ion-button>{{ 'APPLY' | translate }}</button>
+  </div>
+</ion-content>

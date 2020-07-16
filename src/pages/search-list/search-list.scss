@@ -1,0 +1,17 @@
+page-search-list {
+.no-result{
+  margin-top: 70pt;
+  height: 130pt;
+}
+  .no-result-text{
+    margin-top: 20pt;
+    font-weight: bold;
+    color: #959c92;
+    font-size: 2rem;
+  }
+  .try-again-div{
+    margin: 0 15pt;position: absolute;
+    width: 80%;
+    bottom: 25pt;
+  }
+}

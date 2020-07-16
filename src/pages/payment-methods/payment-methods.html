@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>{{ 'PAYMENT_METHODS' | translate }}</ion-title>
+    <ion-buttons end>
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="list_div" (click)="ticketDetails()">
+    <ion-item no-lines>
+      <div class="row">
+        <span style="font-size: 2rem" class="bold-font">10:21</span>
+        <ion-icon margin-left margin-right style="margin-top: 3px" class="big-font text-grey"
+          name="arrow-round-forward"></ion-icon>
+        <span style="font-size: 2rem" class="bold-font">12:40</span>
+        <span class="dot"></span><span class="small-text" style="margin-top: 4pt">2h 19m</span><span
+          class="amount_details">$39.00</span>
+      </div>
+    </ion-item>
+    <ion-item no-lines style="min-height: 1rem">
+      <div class="travel_agaency" style="font-size: 2rem">Shyammoli NR Travels</div>
+      <!--<span class="seats_availble" item-right>24 Seats Left</span>-->
+    </ion-item>
+
+    <div style="margin-top: 10pt;">
+      <span class="bus_class text-grey">Hyundai universe,AC</span>
+    </div>
+    <div style="padding-left: 16px;padding-right: 16px;padding-bottom: 2px;">
+      <p class="live_tracker text-grey">Macciesfiled- Gainsborogh
+        <button class="live_btn">{{ 'LIVE_TRACKER' | translate }}</button>
+      </p>
+    </div>
+    <ion-item no-lines>
+      <span>{{ 'DATE' | translate }} : 2 July 2020</span>
+      <span item-right>{{ 'TOTAL_SEAT' | translate }} : 02</span>
+    </ion-item>
+  </ion-list>
+  <div class="payment_cards">{{ 'PAYMENT_CARDS' | translate }}</div>
+  <div class="saparator"></div>
+  <ion-item no-lines style="min-height: 1rem">
+    <img style="width: 9%;" src="assets/img/addcard.png">
+    <span class="new_card">{{ 'ADD_A_NEW_CARD' | translate }}</span>
+    <ion-icon class="text-grey" item-right ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline">
+    </ion-icon>
+  </ion-item>
+  <div class="saparator"></div>
+  <div class="payment_cards">{{ 'PAYMENT_WALLETS' | translate }}</div>
+  <div class="saparator"></div>
+  <ion-item style="min-height: 1rem">
+    <img style="width: 9%;" src="assets/img/applelogo.png">
+    <span class="new_card">{{ 'APPLE_PAY' | translate }}</span>
+    <ion-icon class="text-grey" item-right ios="ios-arrow-forward-outline" md="ios-arrow-forward-outline">
+    </ion-icon>
+  </ion-item>
+  <ion-item no-lines>
+    <img style="width: 20%;" src="assets/img/paypal.png">
+  </ion-item>
+  <div class="saparator"></div>
+</ion-content>

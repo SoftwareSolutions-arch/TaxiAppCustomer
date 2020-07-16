@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons no-margin left>
+      <button padding-left no-margin ion-button icon-only menuToggle>
+        <ion-icon class="text-white" name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>{{ 'JOURNEY_DETAILS' | translate }}</ion-title>
+    <ion-buttons end (click)="openNotificationPage()">
+      <button padding ion-button icon-only>
+        <ion-icon class="text-white" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="header-function">{{ 'SELECT_VEHICLE_TYPE' | translate }}</div>
+  <div class="select-data small-text">
+    <select>
+      <option>{{ 'CHARTERED_BUS' | translate }}</option>
+      <option>{{ 'AC_BUS' | translate }}</option>
+      <option>{{ 'CHARTERED_BUS' | translate }}</option>
+    </select>
+  </div>
+  <div class="header-function">{{ 'SELECT_JOURNEY_ROUTE' | translate }}</div>
+  <div (click)="selectRoute()" class="select-data small-text">
+    <ion-item no-lines>
+      <div item-left class="dot"></div><span class="small-text">{{ 'ENTER_BOARDING' | translate }}</span>
+    </ion-item>
+    <div>
+      <div class="half-saparator"></div><img class="direction" src="assets/img/direction-arrow.png">
+    </div>
+    <ion-item no-lines>
+      <div item-left class="dot" style="background: #178D42"></div><span
+        class="small-text">{{ 'ENTER_DESTINATION' | translate }}</span>
+    </ion-item>
+  </div>
+  <ion-item no-lines>
+    <div item-left class="header-function">{{ 'SELECT_JOURNEY_DATE' | translate }}</div>
+    <ion-toggle class="small-text" item-right></ion-toggle>
+    <div class="small-text" item-right>{{ 'ROUNDTRIP' | translate }}</div>
+  </ion-item>
+  <div class="select-data" (click)="openCalendar()">
+    <ion-item style="min-height: 1rem" class="small-text" no-lines no-margin no-padding>
+      <ion-icon margin-left class="text-green" name="md-calendar"></ion-icon><span margin-left>12 July 2020</span>
+      <span item-right>Thursday</span>
+    </ion-item>
+  </div>
+  <div class="search-btn-div">
+    <button (click)="search()" ion-button full round>{{ 'SEARCH' | translate }}</button>
+  </div>
+
+  <div class="header-function">{{ 'SPECIAL_OFFER' | translate }}</div>
+  <ion-slides margin-top slidesPerView="1.1">
+    <ion-slide>
+      <img padding-left src="assets/img/banner.png">
+    </ion-slide>
+    <ion-slide>
+      <img padding-left src="assets/img/banner.png">
+    </ion-slide>
+    <ion-slide>
+      <img padding-left src="assets/img/banner.png">
+    </ion-slide>
+  </ion-slides>
+</ion-content>
